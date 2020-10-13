@@ -1,6 +1,6 @@
 ---
-layout: deeplinks
-title: Some assorted links
+layout: blog
+title: deeplinks
 icon: fa-pencil-alt
 order: 2
 ---
