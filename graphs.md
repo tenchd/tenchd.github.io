@@ -29,6 +29,7 @@ Existing work
 We built [GraphZeppelin](/deeplinks/graphzeppelin.pdf), a graph stream processing system which uses linear sketching techniques to space-efficiently find connected components of dynamic graphs.  The paper is in submission to [SIGMOD 2022](https://2022.sigmod.org/) and you can check out our [code here](https://github.com/GraphStreamingProject/GraphStreamingCC).  GraphZeppelin showcases several other advantages of linear sketching techniques: it is highly parallel, scales well to external memory and can be distributed efficiently on a cluster for even better scaling.
 
 GraphZeppelin uses asymptotically less space to process dense graphs than the current state-of-the-art systems for graph stream processing.  Its space efficiency advantages become apparent even for relatively small dense graphs (hundreds of thousands of nodes).
+
 <img src="public_html/images/size.png" alt="test" width="1000"/>
 
 
