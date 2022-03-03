@@ -11,6 +11,8 @@ Real-world graph data sets with _at least tens of million nodes_ (more is better
 
 The graph data sets can represent anything, we're not picky.  Graphs which change over time (e.g., edges may be inserted or deleted) are especially useful for our purposes.
 
+If you have the datasets we're looking for, please [contact me](dtench@pm.me)!
+
 ## Why we want these datasets:
 
 I'm leading a team of researchers in building space-efficient tools for processing dynamic graphs (graphs which change over time).  These tools use linear sketching, which allows us to (sometimes approximately) compute properties of graphs using space much smaller than is required to store the graph losslessly.  The space requirements of these algorithms scale with the number of nodes in the graph, *but not the number of edges*.
@@ -25,5 +27,8 @@ Existing work
 --------------
 
 We built [GraphZeppelin](/deeplinks/graphzeppelin.pdf), a graph stream processing system which uses linear sketching techniques to space-efficiently find connected components of dynamic graphs.  The paper is in submission to [SIGMOD 2022](https://2022.sigmod.org/) and you can check out our [code here](https://github.com/GraphStreamingProject/GraphStreamingCC).  GraphZeppelin showcases several other advantages of linear sketching techniques: it is highly parallel, scales well to external memory and can be distributed efficiently on a cluster for even better scaling.
+
+<img src="public_html/images/size.png" alt="test" width="200"/>
+
 
 ![test](public_html/images/size.png)
