@@ -33,3 +33,19 @@ GraphZeppelin uses asymptotically less space to process dense graphs than the cu
 <img src="public_html/images/size.png" alt="test" width="1000"/>
 
 
+
+<p>You can use this form to contact me about graph datasets, or simply email me.</p>
+
+<form method="post" action="https://formspree.io/dtench@pm.me">
+  <div class="row">
+    <div class="6u 12u$(mobile)"><input type="text" name="name" placeholder="Name" /></div>
+    <div class="6u$ 12u$(mobile)"><input type="text" name="email" placeholder="Email" /></div>
+    <div class="12u$">
+      <textarea name="message" placeholder="Message"></textarea>
+    </div>
+    <div class="12u$">
+      <input type="submit" value="Send Message" />
+    </div>
+  </div>
+</form>
+
