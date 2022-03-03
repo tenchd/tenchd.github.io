@@ -4,6 +4,14 @@ layout: page
 hide: true
 ---
 
+## What we're looking for:
+Real-world graph data sets with _at least tens of million nodes_ (more is better) and at least _100 thousand unique edges per node_ (more is better). By *unique* we mean that multi-edges don't count: if there are 10 copies of an edge between nodes u and v in your dataset, we'd count that as a single edge.
+
+(Graphs that aren't *quite* this large or dense, if you have them, would still be interesting though not ideal.)
+
+The graph data sets can represent anything, we're not picky.  Graphs which change over time (e.g., edges may be inserted or deleted) are especially useful for our purposes.
+
+## Why we want these datasets:
 
 I'm leading a team of researchers in building space-efficient tools for processing dynamic graphs (graphs which change over time).  These tools use linear sketching, which allows us to (sometimes approximately) compute properties of graphs using space much smaller than is required to store the graph losslessly.  The space requirements of these algorithms scale with the number of nodes in the graph, *but not the number of edges*.
 
@@ -11,13 +19,11 @@ This is especially useful when processing *dense* graphs (graphs that have a lot
 
 We believe that tools designed for computing properties of large, dense, dynamic graphs are useful, and are actively looking for real-world graph datasets which are large and dense.
 
-Specifically, we are looking for graphs with _at least tens of million nodes_ (more is better) and at least _100 thousand edges per node_ (more is better).
-
-(Graphs that aren't *quite* this large or dense, if you have them, would still be interesting though not ideal.)
-
 
 
 Existing work
 --------------
 
 We built [GraphZeppelin](/deeplinks/graphzeppelin.pdf), a graph stream processing system which uses linear sketching techniques to space-efficiently find connected components of dynamic graphs.  The paper is in submission to [SIGMOD 2022](https://2022.sigmod.org/) and you can check out our [code here](https://github.com/GraphStreamingProject/GraphStreamingCC).  GraphZeppelin showcases several other advantages of linear sketching techniques: it is highly parallel, scales well to external memory and can be distributed efficiently on a cluster for even better scaling.
+
+![test](public_html/images/size.png)
