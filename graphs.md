@@ -30,7 +30,11 @@ We built [GraphZeppelin](/deeplinks/graphzeppelin.pdf), a graph stream processin
 
 GraphZeppelin uses asymptotically less space to process dense graphs than the current state-of-the-art systems for graph stream processing.  Its space efficiency advantages become apparent even for relatively small dense graphs (hundreds of thousands of nodes).
 
-<img src="public_html/images/size.png" alt="test" width="1000"/>
+<p class="aligncenter">
+    <img src="public_html/images/size.png" alt="" width="800"/>
+</p>
+
+
 
 ## Got Graph Datasets?
 
