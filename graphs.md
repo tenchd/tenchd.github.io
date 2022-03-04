@@ -34,7 +34,7 @@ GraphZeppelin uses asymptotically less space to process dense graphs than the cu
 
 ## Got Graph Datasets?
 
-<p>You can use this form to contact me about graph datasets. Or just [email me.](mailto:dtench@pm.me)</p>
+<p>You can use this form to contact me about graph datasets. Or just [email me](mailto:dtench@pm.me).</p>
 
 <form method="post" action="https://formspree.io/dtench@pm.me">
   <div class="row">
