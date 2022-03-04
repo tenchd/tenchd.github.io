@@ -11,7 +11,7 @@ Real-world graph data sets with _at least tens of million nodes_ (more is better
 
 The graph data sets can represent anything, we're not picky.  Graphs which change over time (e.g., edges may be inserted or deleted) are especially useful for our purposes.
 
-If you have the datasets we're looking for, please [contact me via email](dtench@pm.me) or using the web form at the bottom of this page.
+If you have the datasets we're looking for, please [contact me via email](mailto:dtench@pm.me) or using the web form at the bottom of this page.
 
 ## Why we want these datasets:
 
@@ -34,7 +34,7 @@ GraphZeppelin uses asymptotically less space to process dense graphs than the cu
 
 ## Got Graph Datasets?
 
-<p>You can use this form to contact me about graph datasets.</p>
+<p>You can use this form to contact me about graph datasets. Or just [email me.](mailto:dtench@pm.me)</p>
 
 <form method="post" action="https://formspree.io/dtench@pm.me">
   <div class="row">
