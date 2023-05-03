@@ -31,9 +31,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: David Tench
-subtitle: Cross-Disciplinary CS Theorist
+subtitle: Algorithms & Systems for Massive-Scale Computation
 description: >- # this means to ignore newlines until "baseurl:"
-  The personal webpage of David Tench, CS researcher.
+  The personal webpage of David Tench, CS research scientist.
 author: David Tench
 email: dtench@pm.me
 avatar: public_html/images/me2.jpeg
