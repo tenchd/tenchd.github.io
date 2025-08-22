@@ -21,6 +21,9 @@ This is especially useful when processing *dense* graphs (graphs that have a lot
 
 We believe that tools designed for computing properties of large, dense, dynamic graphs are useful, and are actively looking for real-world graph datasets which are large and dense.
 
+The following phase-change diagram shows the set of graphs for which graph sketching is more space efficient than lossless (adjacency list or adjacency matrix) graph representations. The various shaded blue regions indicate graphs for which graph sketching saves space for connectivity and minimum cut problems. Note that the smallest graphs in this blue region have roughly a million nodes and average degree roughly 40 thousand.
+
+<img src="public_html/images/phase-change.png" alt="" width="800" align="middle"/>
 
 
 Existing work
@@ -32,7 +35,6 @@ GraphZeppelin uses asymptotically less space to process dense graphs than state-
 
 <img src="public_html/images/size.png" alt="" width="800" align="middle"/>
 
-<img src="public_html/images/phase-change.pdf" alt="" width="800" align="middle"/>
 
 Since then, we've built more graph sketching systems:
 
