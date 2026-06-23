@@ -15,3 +15,28 @@ I design space-efficient, memory-hierarchy-aware algorithms and build systems to
 Check out my [one-page resume](pdfs/tench_resume.pdf) and my [academic CV](pdfs/tench_cv.pdf).
 
 To get in touch, email me at dtench [at] pm [dot] me.
+
+NOTE: I am currently revamping this website; some functionality may be broken. Check back soon.
+
+## Latest News
+<section>
+    <div class="media t-hackcss-media">
+      <div class="t-hackcss-media-shift media-left">
+        <img class="t-hackcss-media-image"
+             src="images/landscape.jpg" alt="landscape"
+             title="Example Post" />
+      </div>
+      <div class="media-body">
+        <div class="media-heading">
+          <span>January 12th, 2025 |
+            <a href="_posts/2026-01-01-landscape.markdown" target="_blank" title="Landscape">
+              Landscape
+            </a>
+          </span>
+        </div>
+        <div class="media-content">
+          Exploring the strange performance landscape of graph sketching
+        </div>
+      </div>
+    </div>
+</section>

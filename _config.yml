@@ -9,28 +9,30 @@ your_name: David Tench
 navigation:
   - text: Home
     url: /
-  - text: Examples
-    url: /examples
   - text: Bio
     url: /bio
   - text: Publications
     url: /publications
+  - text: Software
+    url: /software
+  - text: Recent News
+    url: /news
 
 
 # if you want to use something like the card-based 'projects' in examples.html
 projects:
-  - name: jekyll-hackcss
-    description: A jekyll gem-style theme based on hack.css
-    link: https://github.com/vcavallo/jekyll-hackcss
-  - name: Impostor Roster
-    description: A place for newbies of all experience level to admit their shortcomings
-    link: http://impostorroster.com
-  - name: Rate my Refactor
-    description: Advice and discussion about code design and refactoring, crowd-sourced from a community of experts in your field
-    link: http://www.ratemyrefactor.com/
-  - name: Termodoro
-    description: A simple CLI pomodoro client ruby gem
-    link: https://github.com/vcavallo/termodoro
+  - name: GraphZeppelin
+    description: storage-friendly connected components sketching
+    link: https://github.com/GraphStreamingProject/GraphZeppelin
+  - name: Landscape
+    description: distributed connectivity sketching
+    link: https://github.com/GraphStreamingProject/Landscape
+  - name: Mesh
+    description: impossible compacting memory management for C++
+    link: https://github.com/plasma-umass/Mesh
+  - name: spec_spars
+    description: a prototype streaming spectral sparsifier
+    link: https://github.com/tenchd/spec_spars
 
 # if you plan to use the social links in the footer
 social:
