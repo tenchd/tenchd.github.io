@@ -6,7 +6,7 @@ title: David Tench
 
 layout: default
 ---
-# David Tench
+# Homepage
 
 Hi! I'm a computer scientist interested in processing massive datasets.
 

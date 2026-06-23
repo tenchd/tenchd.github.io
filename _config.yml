@@ -2,6 +2,7 @@ remote_theme: vcavallo/jekyll-hackcss
 theme_mode: markdown
 
 # pretty necessary for the footer (unless removed)
+title: el que lee mucho y anda mucho, ve mucho y sabe mucho
 your_name: David Tench
 email: dtench [at] pm [dot] me
 
@@ -17,6 +18,8 @@ navigation:
     url: /software
   - text: Recent News
     url: /news
+
+navigation_menu_heading: David Tench
 
 
 # if you want to use something like the card-based 'projects' in examples.html
