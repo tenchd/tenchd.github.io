@@ -1,33 +1,42 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+theme: jekyll-hackcss
+theme_mode: markdown
 
-title: David Tench
-subtitle: Massive-Scale Algorithms & Systems
+# pretty necessary for the footer (unless removed)
+your_name: David Tench
 email: dtench@pm.me
-scription: >- # this means to ignore newlines until "baseurl:"
-  The personal webpage of David Tench, CS research scientist.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.davidtench.com/" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: https://twitter.com/davidtench_
-github_username:  https://github.com/tenchd
 
+# this is how the menu panel is constructed:
+navigation:
+  - text: Home
+    url: /
+  - text: Examples
+    url: /examples
+  - text: Bio
+    url: /bio
+  - text: Publications
+    url: /publications
+    
 
-avatar: public_html/images/me2.jpeg
+# if you want to use something like the card-based 'projects' in examples.html
+projects:
+  - name: jekyll-hackcss
+    description: A jekyll gem-style theme based on hack.css
+    link: https://github.com/vcavallo/jekyll-hackcss
+  - name: Impostor Roster
+    description: A place for newbies of all experience level to admit their shortcomings
+    link: http://impostorroster.com
+  - name: Rate my Refactor
+    description: Advice and discussion about code design and refactoring, crowd-sourced from a community of experts in your field
+    link: http://www.ratemyrefactor.com/
+  - name: Termodoro
+    description: A simple CLI pomodoro client ruby gem
+    link: https://github.com/vcavallo/termodoro
 
+# if you plan to use the social links in the footer
+social:
+  - service: github
+    username: tenchd
+    link: https://github.com/tenchd
+  - service: twitter
+    username: davidtench_
+    link: https://x.com/davidtench_
