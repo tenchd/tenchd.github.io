@@ -1,4 +1,4 @@
-theme: jekyll-hackcss
+remote_theme: vcavallo/jekyll-hackcss
 theme_mode: markdown
 
 # pretty necessary for the footer (unless removed)
@@ -15,7 +15,7 @@ navigation:
     url: /bio
   - text: Publications
     url: /publications
-    
+
 
 # if you want to use something like the card-based 'projects' in examples.html
 projects:
