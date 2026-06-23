@@ -3,7 +3,7 @@ theme_mode: markdown
 
 # pretty necessary for the footer (unless removed)
 your_name: David Tench
-email: dtench@pm.me
+# email: dtench@pm.me
 
 # this is how the menu panel is constructed:
 navigation:
