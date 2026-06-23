@@ -12,8 +12,6 @@ permalink: archive
 </section>
 
 <section>
-
-
     <div class="media t-hackcss-media">
       <div class="t-hackcss-media-shift media-left">
         <img class="t-hackcss-media-image"
@@ -23,13 +21,13 @@ permalink: archive
       <div class="media-body">
         <div class="media-heading">
           <span>January 12th, 2025 |
-            <a href="_posts/2026-01-01-landscape.markdown" target="_blank" title="Landscape">
+            <a href="../graphzeppelin" target="_blank" title="GraphZeppelin">
               GZ talk
             </a>
           </span>
         </div>
         <div class="media-content">
-          TODO
+          I present the first-ever practical graph sketching system
         </div>
       </div>
     </div>
@@ -37,19 +35,19 @@ permalink: archive
     <div class="media t-hackcss-media">
       <div class="t-hackcss-media-shift media-left">
         <img class="t-hackcss-media-image"
-             src="images/landscape.jpg" alt="landscape"
+             src="images/shuffle.png" alt="shuffle vector"
              title="Example Post" />
       </div>
       <div class="media-body">
         <div class="media-heading">
-          <span>January 12th, 2025 |
-            <a href="_posts/2026-01-01-landscape.markdown" target="_blank" title="Landscape">
-              mesh shuffle vector
+          <span>March 3rd, 2020 |
+            <a href="../mesh" target="_blank" title="Landscape">
+              Shuffle Vectors
             </a>
           </span>
         </div>
         <div class="media-content">
-          TODO
+          a fan implementation of the shuffle vector data structure
         </div>
       </div>
     </div>

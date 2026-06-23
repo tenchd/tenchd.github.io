@@ -29,7 +29,7 @@ NOTE: I am currently revamping this website; some functionality may be broken. C
       <div class="media-body">
         <div class="media-heading">
           <span>January 12th, 2025 |
-            <a href="_posts/2026-01-01-landscape.markdown" target="_blank" title="Landscape">
+            <a href="landscape" target="_blank" title="Landscape">
               Landscape
             </a>
           </span>

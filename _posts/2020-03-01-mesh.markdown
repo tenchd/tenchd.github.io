@@ -1,0 +1,11 @@
+---
+layout: post
+title:  A Shuffle Vector Implementation
+date:   2020-03-01 18:52:50 -0400
+categories: publications
+permalink: mesh
+---
+
+Nothing is more edifying than someone else getting excited by something I've published. So I am very pleased by [this explanatory notebook](https://observablehq.com/@jobleonard/shuffle-vectors) of the "shuffle vector" data structure from our recent memory compaction paper <a href="https://arxiv.org/abs/1902.04738">MESH</a>.  Notebook w/ JS implementation by <a href="https://beta.observablehq.com/@jobleonard">Job van der Zwan</a>. 
+
+EDIT: a <a href="https://github.com/MattWoelk/shuffle_vector">rust</a> implementation by <a href="http://mattwoelk.ca/">Matt Woelk</a> as well!
