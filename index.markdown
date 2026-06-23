@@ -16,8 +16,6 @@ Check out my [one-page resume](pdfs/tench_resume.pdf) and my [academic CV](pdfs/
 
 To get in touch, email me at dtench [at] pm [dot] me.
 
-NOTE: I am currently revamping this website; some functionality may be broken. Check back soon.
-
 ## Latest News
 <section>
     <div class="media t-hackcss-media">
