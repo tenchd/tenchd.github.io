@@ -2,6 +2,7 @@
 title: Help Us Find Large, Dense Graph Datasets
 layout: page
 hide: true
+permalink: graphs
 ---
 # Help Us Find Large, Dense Graph Datasets
 
