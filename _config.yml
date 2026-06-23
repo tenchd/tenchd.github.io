@@ -42,3 +42,6 @@ social:
   - service: twitter
     username: davidtench_
     link: https://x.com/davidtench_
+  - service: linkedin
+    username: david-tench
+    link: https://linkedin.com/in/david-tench
