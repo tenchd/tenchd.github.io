@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Landscape
-date:   2026-06-22 18:52:50 -0400
+date:   2025-01-12 18:52:50 -0400
 categories: publications
 permalink: landscape
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  GraphZeppelin
-date:   2024-05-06 18:52:50 -0400
+date:   2022-06-30 18:52:50 -0400
 categories: publications
 permalink: graphzeppelin
 ---

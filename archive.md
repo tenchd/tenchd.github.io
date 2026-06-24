@@ -20,7 +20,7 @@ permalink: archive
       </div>
       <div class="media-body">
         <div class="media-heading">
-          <span>January 12th, 2025 |
+          <span>June 30th, 2022 |
             <a href="../graphzeppelin" target="_blank" title="GraphZeppelin">
               GZ talk
             </a>
