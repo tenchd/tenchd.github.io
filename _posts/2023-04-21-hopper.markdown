@@ -1,0 +1,9 @@
+---
+layout: post
+title:  Hopper Fellowship
+date:   2023-04-21 18:52:50 -0400
+categories: publications
+permalink: hopper
+---
+
+I was recently awarded the 2023 <a href= "https://cs.lbl.gov/careers/computing-fellowships/hopper-fellowship/">Grace Hopper postdoctoral fellowship </a> at <a href= "https://cs.lbl.gov/">Lawrence Berkeley Labs </a>, funding a three-year postdoctoral position to build systems powered by randomized and memory-hierarchy-aware algorithms to solve massive-scale scientific problems. Read my <a href= "https://cs.lbl.gov/news/2023-hopper-fellow-embraces-the-challenges-of-large-scale-science/">interview! </a>
