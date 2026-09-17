@@ -1,0 +1,49 @@
+---
+title: Software
+layout: default
+permalink: software
+---
+
+<section>
+  <h1>Software</h1>
+  <p>
+    I lead a research team that writes high-performance sketching systems for processing massive graph and network datasets.</b>  <a href="https://github.com/GraphStreamingProject">[Github Project page]</a>
+  </p>
+
+  <p> I also design and implement high-performance randomized algorithms for <a href="https://github.com/splatlab/adaptiveqf">adaptive filters</a>, <a href="https://github.com/tenchd/flushing_schedule">cybersecurity monitoring</a>, <a href="https://github.com/plasma-umass/Mesh">memory management</a>, and more. </p>
+</section>
+
+
+<section>
+  <h2>Selected Projects</h2>
+
+  <div class="grid t-hackcss-cards">
+
+    {% for project in site.projects %}
+    <div class="cell -6of12 t-hackcss-cards-cell">
+      <div class="card">
+        <header class="card-header">{{ project.name }}</header>
+        <div class="card-content">
+          <div class="inner">
+
+            {% if project.image %}
+            <img src="{{ project.image }}" class="t-hackcss-cards-image"
+                 alt="{{ project.name }}"
+                 title="{{ project.name }}" />
+            {% endif %}
+
+            <p class="t-hackcss-cards-text">{{ project.description }}</p>
+            <p class="t-hackcss-cards-link">
+              <a href="{{ project.link }}" title="{{ project.name }}" target="_blank">
+                 {{ project.name }}
+               </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+  </div>
+</section>
+

@@ -1,0 +1,9 @@
+---
+layout: post
+title:  Adaptive Filters
+date:   2024-05-06 18:52:50 -0400
+categories: publications
+permalink: filters
+---
+
+Did you know that Bloom (and quotient, cuckoo, etc) filters are vulnerable to malicious attacks? My upcoming <a href ="https://2025.sigmod.org/">SIGMOD 2025</a> paper introduces <a href="https://arxiv.org/pdf/2405.10253"> adaptive quotient filters </a>, which fix their mistakes to defend against adversaries and improve performance on naturally-occurring database and networking applications; essentially for free!
