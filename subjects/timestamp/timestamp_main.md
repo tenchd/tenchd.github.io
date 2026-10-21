@@ -14,9 +14,9 @@ Read [this](overview.md) for more information on Amber.
 
 ## Existing Timestamps
 
-<table align="center">
-  <tr><th align="center">Timestamp</th><th align="center">Date Created</th></tr>
-  <tr><td><a href="timestamps/pgtimestamp.md">Project Gutenberg</a></td><td>June 26, 2026</td></tr>
-  <tr><td><a href="timestamps/kagglenews.md">Kaggle Newspapers</a></td><td>Sept 27, 2026</td></tr>
-  <tr><td><a href="timestamps/timemag.md">TIME Magazine 1923-2015</a></td><td>Sept 28, 2026</td></tr>
-</table>
+
+| Timestamp | Date Created |
+| --------- | ---- |
+| [Project Gutenberg](timestamps/pgtimestamp.md) | June 26, 2026 |
+| [Kaggle Newspapers](timestamps/kagglenews.md) | Sept 27, 2026 |
+| [TIME Magazine](timestamps/timemag.md) | Sept 28, 2026|
