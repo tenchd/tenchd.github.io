@@ -2,7 +2,7 @@
 title: PG Corpus Timestamp
 layout: page
 hide: true
-permalink: timestamp
+permalink: pgtimestamp
 ---
 # Project Gutenberg Corpus Secure Timestamp
 On June 26, 2026, I encoded the Project Gutenberg corpus into a Merkle tree and wrote the root hash on the Bitcoin blockchain at [block 955522](https://blockstream.info/tx/b82b914e29fb08e65e49156231b68c38c3bcb246f6a7d8ec22477478a9f1b832?expand). This comprises a secure timestamp of the Project Gutenberg corpus. In other words, the Merkle tree and the block containing its root hash provide cryptographic-strength proof that each Project Gutenberg text existed in June 2026. 
