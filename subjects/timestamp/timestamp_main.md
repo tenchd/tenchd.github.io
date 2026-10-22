@@ -10,7 +10,7 @@ Amber is an in-development utility for creating **secure timestamps**. A secure 
 The goal of this project is to create an easy-to-use, free, open-source software tool that creates secure timestamps, and to timestamp as much of humanity's digital historical record as possible in the next several years.
 
 ## Motivation and Techniques
-Read [this](overview.md) for more information on Amber.
+Read [this](overview.md) for more information on Amber. It explains why timestamping data is urgently necessary, how we can do it with existing, well-tested, cheap computer science techniques, and how you can help.
 
 ## Project Status
 To date, I have made several secure timestamps of culturally- and historically-relevant corpuses (see below). 
