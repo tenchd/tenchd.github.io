@@ -11,7 +11,7 @@ This is the first secure timestamp I produced, and as far as I know, it is the f
 
 ## Corpus Details
 
-I downloaded the Project Gutenberg corpus directly from their website on June 11th. They make nearly all of their texts available as zipped tar file, updated weekly, at https://www.gutenberg.org/cache/epub/feeds/txt-files.tar.zip. This collection omits texts in the corpus that have no plain text version available (such as PG40) or that are not really books (such as PG50, which simply lists the first 1 million digits of pi). The highest PG ID in the collection I downloaded was 78827, but the number of texts in the corpus is a little lower than that, because of these missing texts.
+I downloaded the Project Gutenberg corpus directly from their website on June 11th. They make nearly all of their texts available as zipped tar file, updated weekly, [here](https://www.gutenberg.org/cache/epub/feeds/txt-files.tar.zip). This collection omits texts in the corpus that have no plain text version available (such as PG40) or that are not really books (such as PG50, which simply lists the first 1 million digits of pi). The highest PG ID in the collection I downloaded was 78827, but the number of texts in the corpus is a little lower than that, because of these missing texts.
 
 ## Timestamp Details
 
