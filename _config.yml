@@ -27,15 +27,15 @@ projects:
   - name: GraphZeppelin
     description: storage-friendly connected components sketching
     link: https://github.com/GraphStreamingProject/GraphZeppelin
-  - name: Landscape
-    description: distributed connectivity sketching
-    link: https://github.com/GraphStreamingProject/Landscape
+  - name: Amber
+    description: a utility for secure timestamping
+    link: https://github.com/tenchd/amber
   - name: Mesh
     description: impossible compacting memory management for C++
     link: https://github.com/plasma-umass/Mesh
-  - name: spec_spars
-    description: a prototype streaming spectral sparsifier
-    link: https://github.com/tenchd/spec_spars
+  - name: Landscape
+    description: distributed connectivity sketching
+    link: https://github.com/GraphStreamingProject/Landscape
 
 # if you plan to use the social links in the footer
 social:
