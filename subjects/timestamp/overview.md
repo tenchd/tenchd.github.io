@@ -13,7 +13,12 @@ This page is written to be accessible to a reader who is computer-literate but d
 
 Note that this page is also still a work in progress. I'm refining the writing and adding to it regularly.
 
-## Motivation: Hardening the Pre-AI Historical Record
+## What is a secure timestamp?
+A secure timestamp is a digital artifact that proves that texts from a corpus existed at a particular date (and therefore could not have been created after that date). 
+
+When I say "text", I specifically mean not just a text file, but any data that means something to humans. This includes text files and ebooks, but also images, audio recordings, videos, source code, webpages, etc. When I say "corpus", I mean a collection of texts, usually from the same source or concerning the same topic. Examples of well-known corpuses include Project Gutenberg, the Library of Congress's Television Commercial collections, and NOAA's weather and climate data archive.
+
+## Motivation: hardening the pre-AI historical record
 Here's a message I wrote in the first secure timestamp I ever created, in June 2026:
 
 > While the primary challenge of literary and historical conservation efforts across the centuries has been preserving texts, it has also been vital to identify forgeries because they obscure our view of the past.
@@ -22,12 +27,14 @@ Here's a message I wrote in the first secure timestamp I ever created, in June 2
 
 > Imagine the plight of our descendants two hundred years from now, who might wish to read a transcript of John Brown's remarks upon being found guilty of treason and insurrection. Even if the true transcript survives, it may be indistinguishable among many convincingly altered versions. Intentional, politically-motivated alterations could include intensifying or removing Brown's appeals to Christianity, removing his denial of treasonous intent, or rewriting his professed abolitionist motivations into something cruder and more mercenary. Any one of these changes would fundamentally alter the text, and the historical understanding of any reader who accepted it as real. And how could our descendants know which is real, for this or any other text? What truths about our past we have managed to preserve would be lost to a totalizing cultural and historical dementia.
 
-A lot has changed in the months since I wrote that (as I write today it is October 21, 2026). Maybe most shockingly, OpenAI announced that an unreleased frontier model produced proofs to a significant fraction of the top open problems in mathematics, including one of the Millennium problems. While it will be a while before the truth of these claims is established, it is now not inconceivable that LLMs are better than humans at doing original mathematics research. This possibility has shaken the world of mathematics research to its core. We'll see what happens when the dust clears, but it's obvious that mathematics research will be fundamentally different from now on, and the community was completely unprepared for these changes.
+When I wrote that, I was imagining that if LLMs improved enough to get good at historical forgery, the improvement would be gradual and easy to see coming.
 
-Put more crudely, AI techniques are advancing very quickly and accomplishing shocking feats that seemed in the realm of science fiction just a few years ago. Of course no one knows for certain how AI capabilities will continue to progress. But it is clear now that we should think very carefully about what risks we face and how to prepare for them. This project is motivated by a threat I think AI could pose to the historical record.
+A lot has changed in the months since (as I write today it is October 21, 2026). Maybe most shockingly, OpenAI recently announced that an unreleased frontier model produced proofs to a significant fraction of the top open problems in mathematics, including one of the Millennium problems. While it will be a while before the truth of these claims is established, it is now not inconceivable that LLMs are better than humans at doing original mathematics research. This possibility has shaken the world of mathematics research to its core. We'll see what happens when the dust clears, but it's obvious that mathematics research will be fundamentally different from now on, and the community was completely unprepared for these changes.
 
-Specifically, I am going to try to convince you that:
-- **LLMs (and other generative AI technologies) might make rewriting history cheap.**
+Put more crudely, AI techniques are advancing very quickly and accomplishing feats that seemed impossible a few years ago. Of course no one knows for certain how AI capabilities will continue to progress. But it is clear now that we should think very carefully about what risks we face and how to prepare for them. 
+
+This project is about anticipating and preventing one of these risks. Specifically, I want to convince you that:
+- **LLMs (and other generative AI technologies) might one day pose an existential threat to the historical record.**
 - **Secure timestamping mitigates this threat - if we act soon.**
 
 Then I'll explain how we can easily make secure timestamps for essentially no cost, using decades-old, tested-and-true computer science techniques.
@@ -35,7 +42,7 @@ Then I'll explain how we can easily make secure timestamps for essentially no co
 ### How LLMs might rewrite history
 In the 4th century AD, the Roman emperor Constantine the Great issued an imperial decree which transferred authority over Rome and the western part of the Roman Empire, including Jerusalem, to Pope Sylvester I. This document came to be known as the Donation of Constantine, and it was cited in political and religious conflicts for centuries during the Middle Ages. It was used by the papacy to claim authority over kings and emperors.
 
-It was also a lie. Constantine never issued such a decree in the fourth century. Via early linguistic analysis techniques, in the fourteenth century the Donation of Constantine was conclusively established as a forgery. The true details of its creation are unclear, but it was likely produced during the eighth century, either to justify expansion of papal power or as a ploy in internal church politics.
+It was also a lie. Constantine never issued such a decree in the fourth century. Using early linguistic analysis techniques, in the fourteenth century the Donation of Constantine was conclusively established as a forgery. The true details of its creation are unclear, but it was likely produced during the eighth century, either to justify expansion of papal power or as a ploy in internal church politics.
 
 When archivists work to preserve history, much of the focus is on preserving genuine versions of historical texts - protecting them against decay, theft, or accidental destruction. While detecting forgeries is also important, it has largely been a secondary consideration. This is because, historically, producing a good forgery is expensive. Why? 
 1. Physical documents inherently age, and the signs of age are difficult to fake.
@@ -61,6 +68,8 @@ None of these examples constitute successful historical forgeries (by definition
 - Producing MANY forged documents telling a coherent (but false) version of history may become possible, obviating limitation #3. 
 
 If generative AI keeps improving, it may one day become possible to use it to create a large collection of self-consistent digital historical texts which provide a convincing but false view of some aspect of history or culture. Moreover, it might be **cheap** to do this.
+
+I'm saying "if" and "may" a lot, because of course I can't predict the course of AI development. Maybe tomorrow all progress on AI research will hit a mysterious wall and grind to a halt for decades. But we have to acknowledge that forgery-capable generative AI is a credible possibility.
 
 Like I said earlier, we observe on today's internet that spam email is ubiquitous simply because it is cheap for the spammer to send it, and might get them some small benefit. If generating fake history is cheap, it will probably be done at scale too. In the worst-case scenario, large portions of our true history may be lost, even though genuine documents survive, because they are hidden among so many convincing fakes that determining the truth of history is extremely difficult. Imagine millions of documents like the Donation of Constantine, except more expertly written, internally consistent, etc. 
 
@@ -124,9 +133,19 @@ Why bother with the fingerprinting step at all? Why not just write the file cont
 ### Timestamping an entire corpus of files
 Let's say we have a corpus of a million files we want to timestamp. We could fingerprint each file individually and write each fingerprint on the blockchain, but this is expensive for the same reasons writing an entire file on the chain would be.
 
-Instead, we will use a technique to combine all the individual fingerprints into one "master" 32-byte fingerprint. TODO: INSERT EXPLANATION OF MERKLE TREES HERE.
+Instead, we will use a technique to combine all the individual fingerprints into one "master" 32-byte fingerprint. 
+
+The core trick is pretty simple, and I'll illustrate it with a small example first.  Take text 1 and text 2 from the corpus. Each of them has a fingerprint. We concatenate those two fingerprints together, creating a 64-byte bit string. This bit string is data, just like anything else, which means we can also compute *its* fingerprint. So we do that. This "paired" fingerprint can be written to the blockchain to prove the existence of both text 1 and text 2! We have to make sure to write down fingerprint 1, fingerprint 2, and the paired fingerprint. Then, later, if we want to verify that text 1 was timestamped, we compute its fingerprint and confirm that it matches one of the fingerprints we wrote down earlier. Then we check the blockchain and find the paired timestamp there. We've done it! We verified that the paired fingerprint existed at the date of the timestamp because we see it directly on the blockchain. And we see from our stored copies of fingerprints 1 and 2 that the paired fingerprint can only exist because fingerprint 1 existed. So that proves fingerprint 1 existed on that date, and therefore text 1 did as well. We've timestamped two texts, but only written a single fingerprint to the blockchain.
+
+We apply this trick not just for texts 1 and 2 but for each pair of texts in the corpus. We started with a million fingerprints, and now we have 500,000 "paired" fingerprints. Each "paired" fingerprint proves the existence of the two fingerprints that were its input. We can repeat this process again to get 250,000 "four-way" fingerprints and so on until we end up with a single fingerprint that is a combination of each of the original million fingerprints. This method of combining and recombining fingerprints produces a tree structure which is called a Merkle tree, and that last fingerprint is called the "root fingerprint" because it's at the root of the tree structure.
+
+Now we write the root fingerprint on the blockchain, and hang onto the sequence of fingerprint-pairings we used to compute the Merkle tree. If we want to verify whether some file is timestamped, we verify that the root fingerprint is on the blockchain. Then we fingerprint the file and see if it matches one of the fingerprints in the tree. If it does, we've proven the file existed at the date of the timestamp, and we only wrote a single 32-byte fingerprint to the chain.
+
+[Read more about Merkle trees here if you're interested](https://en.wikipedia.org/wiki/Merkle_tree). They are used for lots of purposes in computer science and have been around for almost fifty years.
 
 ## Limitations of secure timestamps
+
+### The big one: timestamps ONLY prove when something existed
 Secure timestamps don't tell us anything special about the timestamped data, other than the fact that it existed at a certain time and hasn't been edited since. It does not certify that the data is "true" in any sense, or authentic, or has been written by the person that claims to have written it. As a concrete example, if I timestamp an ebook copy of Don Quixote, that timestamp would not conclusively prove that it was truly a novel published in the early seventeenth century by Miguel de Cervantes, or that it was a faithful and accurate translation into English from the original Spanish. It also would not rule out the possibility that a malicious actor modified the text shortly before it was timestamped. It would merely establish that the ebook, in its timestamped form, existed in 2026.
 
 When you think about it, this puts historians roughly in the same position as when they have a physical historical document that they can carbon date. They can verify with some degree of certainty that the text is of the time it claims to be, but of course the text could contain lies, bias, fabrications, translation errors, etc. And historical texts containing lies are not even necessarily a bad thing for historians. If you know that a historical text contains intentional lies about something, that is actually very interesting (provided the text is truly as old as you think it is).
@@ -134,6 +153,17 @@ When you think about it, this puts historians roughly in the same position as wh
 If secure timestamping is widely adopted, I expect the benefit to be that establishing the provenance of digital texts would have roughly the same challenges as that of physical texts. This would remain true even if the spam-storm LLM-history-rewriting nightmare I described earlier comes to pass. 
 
 Secure timestamping will not be a magic solution to modern worries about misinformation or fake news. There is also nothing preventing malicious actors from intentionally timestamping false information of all kinds. For the time being, however, I expect that creating convincing false information to timestamp is expensive enough and has low enough payoff in the short term that it is unlikely to happen at scale. And happily, the cost of timestamping large, existing legitimate corpuses is very low.
+
+### Timestamped texts must be preserved exactly
+Let's say I have a timestamped corpus of text files, timestamped September 1, 2026. Each of these files corresponds to a leaf in the merkle tree, and the root of the merkle tree is written to the blockchain. To verify that one of the files existed in Sept. 2026, you would first verify that the merkle root hash is in the blockchain in some block on Sept 1, 2026. Then you would verify that the SHA256 hash of the file exactly matched one of the merkle tree leaf hashes.
+
+This works great, unless you edited the text file somehow. It doesn't have to be a malicious edit; let's say you found and fixed a typo. Now the SHA256 hash of the file is completely different, and so it won't match any of the Merkle tree leaf hashes. From the perspective of the timestamp, this edited file is no different than any other completely unrelated file. It's simply not in the timestamped corpus.
+
+The problem is that many archives periodically edit their files for a variety of reasons. For example, [Project Gutenberg has an errata process where volunteers can submit changes to ebooks to fix typos, translation errors, formatting problems, etc](https://www.gutenberg.org/help/errata.html). This means that any text in the Project Gutenberg corpus can change at any time. If someone made a timestamp of the corpus, and didn't back up the files in exactly their timestamped form, they run the risk of many of the texts getting edited. Any such text would no longer be timestamped. (By the way, when I timestamped the Project Gutenberg corpus in June, [I did save an exact copy of the texts, and I make it available for download](timestamps/pgtimestamp.md).)
+
+So for a timestamp to remain useful far into the future, the corpus it timestamps must be preserved exactly. This is not difficult to do in a technical sense, but does require a little planning. If the corpus being timestamped is frequently used and updated, it's probably safest to make a backup copy that is rarely touched, and timestamp that backup copy.
+
+## We need to start now
 
 Finally, I want to reiterate my earlier point about urgency. We don't know if or when generative AI or some other new computational technique will make it cheap to generate large corpuses of false but internally-consistent digital texts. It could never happen, or it could happen tomorrow. Secure timestamps are at their most useful when they are created BEFORE the invention of powerful forgery techniques. The sooner we can timestamp the digital historical record, the safer it will be.
 
