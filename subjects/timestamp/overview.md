@@ -1,5 +1,5 @@
 ---
-title: Explaining the Amber Project
+title: Amber overview
 layout: page
 hide: true
 permalink: timestamp_overview
@@ -7,16 +7,14 @@ permalink: timestamp_overview
 # Amber: Secure Timestamping
 [Amber](timestamp) is a software utility and part of an ongoing effort to create secure timestamps of the digital historical record.
 
-This page covers the motivations behind this effort, the techniques that make Amber work, and how you can help. If you don't know what a secure timestamp is, read [this page](timestamp) first.
+This page covers the motivations behind this effort, the techniques that make Amber work, and how you can help. It is written to be accessible to a reader who is computer-literate but doesn't necessarily have deep technical computer science expertise.
 
-This page is written to be accessible to a reader who is computer-literate but doesn't necessarily have deep technical computer science expertise.
-
-Note that this page is also still a work in progress. I'm refining the writing and adding to it regularly.
+It's also kind of long --- roughly 5,000 words. That's how long it takes to say the important stuff; I kept it as concise as possible.
 
 ## What is a secure timestamp?
 A secure timestamp is a digital artifact that proves that texts from a corpus existed at a particular date (and therefore could not have been created after that date). 
 
-When I say "text", I specifically mean not just a text file, but any data that means something to humans. This includes text files and ebooks, but also images, audio recordings, videos, source code, webpages, etc. When I say "corpus", I mean a collection of texts, usually from the same source or concerning the same topic. Examples of well-known corpuses include Project Gutenberg, the Library of Congress's Television Commercial collections, and NOAA's weather and climate data archive.
+When I say "text", I specifically mean not just a text file, but any data that means something to humans. This includes text files and ebooks, but also images, audio recordings, videos, source code, webpages, etc. When I say "corpus", I mean a collection of texts, usually from the same source or concerning the same topic. Examples of well-known corpuses include [Project Gutenberg](https://www.gutenberg.org/), the [Library of Congress's Television Commercial collections](https://guides.loc.gov/commercials), and [NOAA's weather and climate data archive](https://www.ncei.noaa.gov/cdo-web/).
 
 ## Motivation: hardening the pre-AI historical record
 Here's a message I wrote in the first secure timestamp I ever created, in June 2026:
@@ -82,13 +80,13 @@ But as I said earlier, digital texts do not inherently show signs of age, and in
 
 Let's imagine that wasn't true. Let's imagine that, specifically, there was a way to attach a non-forgeable, always-accurate "Date Modified" label to a file. As an example, imagine I took a picture of myself today, October 21, 2026, and attached this trustable timestamp label to it. That label would prove two things: First, that the picture existed on October 21, 2026, and second that it had not subsequently been altered - that it had been unchanged since that day. Actually let's say that I took a bunch of selfies in my room today, at different angles and in different lighting, each with an unforgeable timestamp.
 
-If future historians later find my selfie collection and want to know whether the pictures are real, this un-fakeable timestamp would be incredibly helpful. Why? Because **a timestamp constrains the forgery methods that could have been used to create the files, if they were fake**.<sup>[1](#myfootnote1)</sup> It's true that I could have doctored each photo using Photoshop, or fabricated it wholesale using a generative AI tool. But it's difficult with photoshop or today's gen AI tools to ensure that a hundred photos of me and my room at various angles are spacially and informationally consistent, look realistic, and avoid the relatively reliable techniques available today to detect photo forgery. It would certainly be very difficult and take some human expertise. It might be impossible, I'm not sure.
+If future historians later find my selfie collection and want to know whether the pictures are real, this un-fakeable timestamp would be incredibly helpful. Why? Because **a timestamp constrains the forgery methods that could have been used to create the files, if they were fake**.<sup>[1](#myfootnote1)</sup> It's true that I could have doctored each photo using Photoshop, or fabricated it wholesale using a generative AI tool. But it's difficult with Photoshop or today's gen AI tools to ensure that a hundred photos of me and my room at various angles are spacially and informationally consistent, look realistic, and avoid the relatively reliable techniques available today to detect photo forgery. It would certainly be very difficult and take some human expertise. It might be impossible, I'm not sure.
 
 Imagine then that in 2030 someone invents a gen AI tool that CAN actually generate such a collection of pictures, and is statistically indistinguishable from real photographs. Let's say that it is SO good and SO convincing that no one EVER figures out how to detect its forgeries. Without the timestamp, historians would be out of luck. They would have no way to tell whether my photo collection was real or forged. But the timestamp tells them that the photos existed before the invention of the undetectable AI tool, and had not been edited in any way since. So after ruling out detectable pre-2026 forgery methods, they could conclude that the photographs were probably real.
 
 It seems unlikely that someone will invent a forgery method that is forever undetectable. More likely, forgery and detection methods both improve over time in an arms race; old forgery methods become detectable and stop being used, and new temporarily-undetectable methods are discovered. It's not unthinkable that the status quo is that the latest forgery methods are hard to detect, but after a few years people work out reliable detection techniques. In this case, knowing that a file existed a long time ago is still enough to determine authenticity.
 
-The bottom line is, creating secure timestamps of historically important digital texts might be necessary for retaining the bulk of our historical knowledge over time. Secure timestamps are more useful the older they are, because that rules out more potential forgery techniques. If we wait until some super-forgery-LLM gets invented, it will be too late to make maximally useful timestamps. We must timestamp as much of the historical record as we can BEFORE such technology emerges. Since it is very difficult to estimate how quickly AI techniques will advance, I feel that timestamping is an urgent conservation task. Our descendants' access to verifiably unaltered records of the past is at stake.
+The bottom line is, creating secure timestamps of historically important digital texts might be necessary for retaining the bulk of our historical knowledge over time. Secure timestamps are more useful the older they are, because that rules out more potential forgery techniques. If we wait until some super-forgery-LLM gets invented, it will be too late to make maximally useful timestamps. We must timestamp as much of the historical record as we can BEFORE such technology emerges. Since it is very difficult to estimate how quickly AI techniques will advance, timestamping is an urgent conservation task. Our descendants' access to verifiably unaltered records of the past is at stake.
 
 ## How to make a secure timestamp
 So far I've asked you to trust me that it's possible to create a non-forgeable, accurate "Date Modified"-style timestamp of a collection of digital files. Now I'm going to explain how to do this using existing, well-tested and reliable computer science techniques. I didn't come up with this method of secure timestamping - people have used essentially these same techniques to timestamp the existence of digital data before, primarily for financial or legal purposes. However, none of these existing services get the details quite right for our use case, which is what prompted me to create Amber.
@@ -119,7 +117,7 @@ Note that fingerprinting is a one-way operation: if you have the original data, 
 
 The second thing we need for timestamping is a medium we can write messages to with the following properties:
 1. The medium is permanent and tamper-proof. This means that once someone writes something to the medium, it cannot be changed or deleted.
-2. The medium is inherently timestamped. This means that any message written to the medium is assigned an accurate timestamp of the date and time it was written, and this timestamp is also permanent and tamper-proof.
+2. The medium is inherently timestamped. This means that any message written to the medium is appended with the date and time it was written, and this metadata is also permanent and tamper-proof.
 3. The medium is publicly available. This means that anyone with a computer, an internet connection, and some simple software should be able to read the messages written on the medium themselves.
 
 What medium has these properties? The answer is blockchains. This might surprise you, because blockchains are now mostly associated with cryptocurrencies. But in fact the 1990 paper that introduced the core ideas that underlie all blockchain technology was titled [How to Timestamp a Digital Document](https://link.springer.com/article/10.1007/BF00196791)! Later people realized that if you can timestamp a bunch of records of the form "Alice sends 5 dollars to Bob" and these records can never be edited or erased, you can keep track of an entirely virtual currency (I am of course massively oversimplifying, but that's the basic idea).
@@ -128,7 +126,7 @@ Amber uses the Bitcoin blockchain as its timestamping medium. I made this decisi
 
 We now have the two ingredients we need for a secure timestamp of a file. First we compute the file's fingerprint, and then write this fingerprint on the Bitcoin blockchain. The (permanent and untamperable) blockchain message proves that the fingerprint existed on the day we wrote it to the chain. Since a fingerprint uniquely identifies its input, this also proves that the input data existed on that day too.
 
-Why bother with the fingerprinting step at all? Why not just write the file contents to the blockchain? Well, it turns out that for a number of reasons it is only feasible and cost-effective to write a small amount of data to the blockchain. If we want to timestamp large data (say, a hi-res video file), the cost of writing it to the blockchain would be prohibitive. A 32-byte fingerprint, on the other hand, is almost free to write to the chain.
+Why bother with the fingerprinting step at all? Why not just write the file contents to the blockchain? Well, it turns out that for a number of reasons it is only feasible to write a small amount of data to the blockchain. If we want to timestamp large data (say, a hi-res video file), the cost of writing it to the blockchain would be prohibitive. A 32-byte fingerprint, on the other hand, is almost free to write to the chain.
 
 ### Timestamping an entire corpus of files
 Let's say we have a corpus of a million files we want to timestamp. We could fingerprint each file individually and write each fingerprint on the blockchain, but this is expensive for the same reasons writing an entire file on the chain would be.
@@ -173,4 +171,4 @@ TODO. For now, if you think this is interesting and want to get involved for any
 ## Notes
 <a name="myfootnote1">1</a>: It also constrains the motivations someone could have to make the forgery, which is useful as well, but outside the scope of this writeup.
 
-<a name="myfootnote2">2</a>: To be clear, malicious actors do all sorts of nasty things related to Bitcoin including scamming people and stealing from them. However, importantly, none of these nasty acts have ever involved editing confirmed blocks in the blockchain - they trick their victims in some other way.
+<a name="myfootnote2">2</a>: To be clear, malicious actors do all sorts of nasty things related to Bitcoin including scamming people and stealing from them. However, importantly, none of these nasty acts have ever involved editing confirmed blocks in the blockchain --- they trick their victims in some other way.

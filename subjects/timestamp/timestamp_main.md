@@ -1,5 +1,5 @@
 ---
-title: Amber Secure Timestamping
+title: Amber
 layout: page
 hide: true
 permalink: timestamp
