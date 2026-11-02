@@ -19,10 +19,10 @@ I have published the source code for my secure timestamp reference implementatio
 
 You can download the Merkle tree and its accompanying explanatory document below, as well as a .tar.gz file containing the Project Gutenberg corpus.
 
-[Merkle tree](downloads/pgmerkle.txt) (6.7 MB)
+[Merkle tree](../../../downloads/pgmerkle.txt) (6.7 MB)
 SHA256 hash ```518f265e76d92d06aa863f294efef01f2e2a3c6c1d19012d55b1505e0be8b86b```
 
-[Explanatory document](downloads/explain.txt) (17 KB)
+[Explanatory document](../../../downloads/explain.txt) (17 KB)
 SHA256 hash ```deb4859fb5f483d0251cbe9ebe9908e0591a53511311ee07b134354eac324e22```
 
 [Project Gutenberg corpus from June 11, 2026](https://drive.proton.me/urls/TREXY65MA8#ku23FKKn2Nbm) (10.42 GB, uncompresses to 77113 .txt files)
