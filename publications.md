@@ -7,6 +7,8 @@ permalink: publications
 
 **Hybrid-Sketching Methods for Dynamic Connectivity on Sparse Graphs** Quinten De Man, Gilvir Gill, Michael A. Bender, Laxman Dhulipala, David Tench. In [SIGMOD 2027](). [\[paper\]](https://arxiv.org/pdf/2605.15173)
 
+**GPUSketch: GPU-Accelerated Graph Sketching** Mingun Cho, Evan West, John Owens, David Tench. In [ACDA 2027](https://www.siam.org/conferences-events/siam-conferences/acda27/). Pittsburg, PA 2027.
+
 **Mitigating False Positives in Filters: To Adapt or to Cache?** Tianchi Mo, Michael A. Bender, Tench, David et. al. In [TODS 2025](https://dl.acm.org/toc/tods/2026/51/3). [\[paper\]](https://dl.acm.org/doi/epdf/10.1145/3786324)
 
 **The Case for External Graph Sketching** David Tench, Michael A. Bender, Martı́n Farach-Colton et. al. In [ACDA 2025](https://www.siam.org/conferences-events/past-event-archive/acda25/). Montreal, Canada 2025. (Accept rate 34%) [\[paper\]](pdfs/external.pdf)
