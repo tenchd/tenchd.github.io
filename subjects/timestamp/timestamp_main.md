@@ -16,7 +16,7 @@ The goal of this project is to create an easy-to-use, free, open-source software
 ## Project Status
 To date, I have made several secure timestamps of culturally- and historically-relevant corpuses (see below). 
 
-Amber is an [open-source timestamping utility currently in beta](https://github.com/tenchd/amber). It can be used to create secure timestamps but has not been completely tested and probably still has some bugs. I will soon release a prototype GUI wrapper to make it easier to use.
+Amber is an [open-source timestamping utility currently in beta](https://github.com/tenchd/amber). It can be used to create secure timestamps but has not been completely tested and probably still has some bugs.
 
 I am actively looking for collaborators, in particular people who maintain digital archives or do research into archival methods. If you are interested in working with me or learning more, send me an email and make sure to include "Amber" in the email subject.
 
@@ -26,4 +26,6 @@ I am actively looking for collaborators, in particular people who maintain digit
 | --------- | ---- |
 | [Project Gutenberg](timestamps/pgtimestamp.md) | June 26, 2026 |
 | [Kaggle Newspapers](timestamps/kagglenews.md) | Sept 27, 2026 |
-| [TIME Magazine 1923-2015](timestamps/timemag.md) | Sept 28, 2026|
+| [TIME Magazine 1923-2015](timestamps/timemag.md) | Sept 28, 2026 |
+| [English Wikipedia 2020](timestamps/wiki2020en.md) | Nov 2, 2026 |
+| [English Wikipedia 2026](timestamps/wiki2026en.md) | Nov 18, 2026 |
